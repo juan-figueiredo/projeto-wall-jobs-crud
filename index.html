@@ -15,24 +15,26 @@
         <div class="form-container">
             <form id="productForm">
                 <label for="productName">Nome do Produto:</label>
-                <input type="text" id="productName" required>
+                <input type="text" id="productName" required autocomplete="off">
 
                 <label for="productCode">Código do Produto:</label>
-                <input type="text" id="productCode" required>
+                <input type="text" id="productCode" required autocomplete="off">
 
                 <label for="productDescription">Descrição do Produto:</label>
-                <textarea id="productDescription" required></textarea>
+                <textarea id="productDescription" required autocomplete="off"></textarea>
 
                 <label for="productPrice">Preço do Produto:</label>
-                <input type="number" id="productPrice" required>
+                <input type="number" id="productPrice" required autocomplete="off">
 
                 <button type="button" onclick="saveProduct()">Salvar Produto</button>
+                <!-- <button type="button" onclick="deleteProduct()">Deletar Produto</button> -->
+                
             </form>
         </div>
     </div>
 
 
-
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

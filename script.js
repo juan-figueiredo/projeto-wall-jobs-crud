@@ -1,4 +1,5 @@
 let products = [];
+let code = [];
 
 function renderTable() {
     const table = document.getElementById("productTable");
@@ -28,7 +29,7 @@ function saveProduct() {
     resetForm();
 }
 
-function editProduct(code) {
+function editProduct() {
     const productToEdit = products.find(product => product.code === code);
 
     if (productToEdit) {
@@ -41,8 +42,8 @@ function editProduct(code) {
     }
 }
 
-function deleteProduct(code) {
-    products = products.filter(product => product.code !== code);
+function deleteProduct() {
+    products = products.filter(product => product.code === code === code);
     renderTable();
     resetForm();
 }
@@ -50,5 +51,6 @@ function deleteProduct(code) {
 function resetForm() {
     document.getElementById("productForm").reset();
 }
+
 
 renderTable();
